@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{655FDE3D-BCE0-A085-EABE-F2D8472CF05A}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AssetBundleStuff/LoadAssetBundles.cs">
+    <Files>
+      <File FileName="Assets/Scripts/AssetBundleStuff/Editor/BuildScript.cs" Line="19" Column="1" />
+      <File FileName="Assets/Scripts/AssetBundleStuff/LoadAssetBundles.cs" Line="7" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
