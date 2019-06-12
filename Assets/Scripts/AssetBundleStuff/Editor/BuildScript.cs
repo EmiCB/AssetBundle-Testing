@@ -7,16 +7,28 @@ public class BuildScript : Editor {
     [MenuItem("Assets/Build AssetBundles")]
     //builds assetbundle
     static void BuildAllAssetBundles() {
-        string assetBundleDirectory = "/Users/emicb/Desktop/Bundle";
+        //NOTE add new directory to this array when adding build targets
+        string[] buildTargetSubDirs = {"", "/iOS", "/Android"};
+        //preset paths to build the bundle
+        string assetBundleDirectory = "/Users/emicb/Desktop/TestBundles";
         string assetBundleURL = "https://emicb.github.io/TestAssetBundles";
         //location to build asset bundle
-        string path = assetBundleURL;
-        //creates local directory if it does not exist already
-        if (path == assetBundleDirectory && !Directory.Exists(path)) {
-            Directory.CreateDirectory(path);
-            Debug.Log("Created new directory " + path);
+        string path = assetBundleDirectory;
+
+        //creates local directories if they does not exist already
+        for(int targets = 0; targets < buildTargetSubDirs.Length; targets++) {
+            string newPath = path + buildTargetSubDirs[targets];
+            if (path == assetBundleDirectory && !Directory.Exists(newPath)) {
+                Directory.CreateDirectory(newPath);
+                Debug.Log("Created new directory " + newPath);
+            }
         }
-        //builds to directory, uses LZMA compression & LZ4 recompression, builds to user's build target
-        BuildPipeline.BuildAssetBundles(path, BuildAssetBundleOptions.None, EditorUserBuildSettings.activeBuildTarget);
+
+
+        //NOTE copy and paste lines below and change target and path for aditional build targets
+        //builds to directory, uses LZMA compression & LZ4 recompression, builds for iOS
+        BuildPipeline.BuildAssetBundles(path + "/iOS", BuildAssetBundleOptions.None, BuildTarget.iOS);
+        //builds to directory, uses LZMA compression & LZ4 recompression, builds for Android
+        //BuildPipeline.BuildAssetBundles(path + "/Android", BuildAssetBundleOptions.None, BuildTarget.Android);
     }
 }
