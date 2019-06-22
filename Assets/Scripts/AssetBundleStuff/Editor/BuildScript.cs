@@ -24,7 +24,6 @@ public class BuildScript : Editor {
             }
         }
 
-
         //NOTE copy and paste lines below and change target and path for aditional build targets
         //builds to directory, uses LZMA compression & LZ4 recompression, builds for iOS
         BuildPipeline.BuildAssetBundles(path + "/iOS", BuildAssetBundleOptions.None, BuildTarget.iOS);

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class LoadAssetBundles : MonoBehaviour {
-    string assetBundleServerURL = "https://emicb.github.io/monkeys";
+    string assetBundleServerURL = "https://emicb.github.io/TestBundles/iOS/monkeys";
     UnityWebRequest webRequest;
     AssetBundle ab;
 
